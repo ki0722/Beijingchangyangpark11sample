@@ -1,0 +1,161 @@
+/*-------------------------------
+               BASE
+--------------------------------*/
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+	display: flex;
+	font-size: 16px;
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  cursor: none; /*もともとあるカーソルは非表示に*/
+    height:100vh;
+	color: white;
+}
+
+
+
+
+
+
+
+
+
+/*カーソル要素*/
+#cursor{
+  position: fixed;
+
+  /*丸の大きさと色の指定*/
+  background: #fff;
+  border-radius:10px;
+  width: 20px;
+  height: 20px;
+  margin: -10px 0 0 -10px;/*真ん中にくるようにマイナスマージンで調整*/
+
+  z-index: 2;/*一番手前に来るように*/
+  pointer-events: none;/*クリックできなくなるのを防ぐため。noneで対応*/
+  opacity: 0;
+}
+
+/*ちょっと遅れてついてくるストーカー要素*/
+#stalker{
+  position: fixed;
+
+  /*丸の大きさと色の指定*/
+  background: #00f;
+  width: 60px;
+  height: 60px;
+  border-radius:30px;
+  margin: -30px 0 0 -30px;/*真ん中にくるようにマイナスマージンで調整*/
+  z-index: 1;/*カーソルの後ろに来るように*/
+  pointer-events: none;/*クリックできなくなるのを防ぐため。noneで対応*/
+  opacity: 0;
+}
+/*-------------------------------
+         LAYOUT MOBILE
+--------------------------------*/
+
+
+
+
+main {
+  background:#FFFFFF;
+  justify-content:space-between;
+}
+
+
+
+#slideContainer {
+  max-width:2580px;
+  margin: 2rem auto;
+  width:98%
+}
+
+
+/* #IMAGESET */
+
+  article.ImageSet div.BOX {
+    width: 200px;
+    margin-bottom: 1rem;
+    padding: 0.1rem;
+    background: #DDD;
+  }
+  article.ImageSet div.BOX img {
+    width: 100%;
+  }
+
+
+
+
+
+
+
+article h1,
+article p,
+aside h1,
+aside p {
+  margin-bottom: 1rem;
+}
+
+
+
+/*-------------------------------
+      LAYOUT PC (OverWrite)
+--------------------------------*/
+
+@media only screen and (min-width: 769px) {
+
+  header {
+    height: 7rem;
+  }
+
+  #logo {
+    top: 0.8rem;
+    left: 15%;
+    width: 90px;
+  }
+
+  header h1 {
+    top: 2.5rem;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 1.5rem;
+  }
+
+  #lists {
+    flex-direction: row;
+    justify-content: space-between;
+    top: 7rem;
+    left: 0;
+  }
+  #lists li {
+    flex:1;
+    border-bottom: none;
+    border-right: 1px solid #777;
+  }
+  #lists li:last-child {
+    border-right: none;
+  }
+
+  main {
+    display: flex;
+    flex-wrap：wrap;
+    flex-direction: row;
+    margin-top: 3rem;
+  }
+
+  article {
+    flex: 3;
+    font-size: 1rem;
+  }
+
+  aside {
+    flex: 1;
+    font-size: 1rem;
+  }
+
+}

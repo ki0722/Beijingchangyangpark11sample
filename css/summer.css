@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  margin: 4rem 0;
+  text-align: center;
+  font-size: 2vw;
+}
+
+#ImgSet {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 70%;
+  max-width: 1280px;
+  margin: auto;
+}
+
+#ImgSet li {
+  list-style: none;
+}
+
+#ImgSet img {
+  display: block;
+  width: 80%;
+  margin: auto;
+}

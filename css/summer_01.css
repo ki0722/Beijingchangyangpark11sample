@@ -1,0 +1,43 @@
+* {
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+}
+
+html {
+	height: 100%;
+}
+
+h1{
+	margin-bottom: 20px;
+}
+
+a{
+	color: cyan;
+}
+
+body {
+	display: flex;
+	font-size: 16px;
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+	background-image: url(../images/summer/summer_01.jpg);
+	background-size:cover;
+	height: 100%;
+	color: white;
+}
+
+main {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-left: -250px;
+	margin-top: -250px;
+	background-image: url(../images/summer/summer_01.jpg);
+	background-size:cover;
+	width: 500px;
+	padding-top: 200px;
+	height: 300px;
+	text-align: center;
+	box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+  line-height: 180%;
+}
